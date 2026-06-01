@@ -6,11 +6,12 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "prebuild": "npm run generate:10sen",
+    "generate:10sen": "node --experimental-strip-types generate_10sen.ts",
     "preview": "wrangler pages dev ./dist",
     "typecheck": "tsc --noEmit",
     "check": "biome check .",
-    "fmt": "biome check --write .",
-    "generate:10sen": "node --experimental-strip-types generate_10sen.ts"
+    "fmt": "biome check --write ."
   },
   "packageManager": "npm@10.9.2",
   "dependencies": {
